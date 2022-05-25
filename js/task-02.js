@@ -20,6 +20,7 @@ for(let ingredient of ingredients){
   list.push(item);
 
 }
+
 ingredientsList.append(...list);
 
 

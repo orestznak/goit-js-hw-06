@@ -12,3 +12,59 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// const galleryList = document.querySelector('.gallery')
+
+
+// const imagesList = [];
+
+// for(let image of images){
+//   const li = document.createElement('li');
+
+//   const imageItem = document.createElement('img');
+//   li.append(imageItem);
+//   imagesList.push(li);
+
+//   imageItem.setAttribute('src', image.url);
+//   imageItem.alt = image.alt;
+//   imageItem.width = 350;
+    
+// }
+
+// //оформлення галереї флексбоксами
+// galleryList.style.display = "flex";
+// galleryList.style.flexDdirection = "row";
+// galleryList.style.flexWrap = "wrap";
+// galleryList.style.alignItems ='flex-start';
+// galleryList.style.justifyContent = "space-between"
+
+// galleryList.append(...imagesList)
+
+
+const galleryList = document.querySelector('.gallery')
+
+
+const imagesList = [];
+
+for(let image of images){
+  const li = document.createElement('li');
+ 
+  const imageItem = document.createElement('img');
+  li.append(imageItem);
+  imagesList.push(li);
+
+  imageItem.setAttribute('src', image.url);
+  imageItem.alt = image.alt;
+  imageItem.width = 350;
+
+    
+}
+
+//оформлення галереї флексбоксами
+galleryList.style.display = "flex";
+galleryList.style.flexDdirection = "row";
+galleryList.style.flexWrap = "wrap";
+galleryList.style.alignItems ='flex-start';
+galleryList.style.justifyContent = "space-between"
+
+galleryList.append(...imagesList)
