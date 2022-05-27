@@ -1,11 +1,22 @@
 const rangeInput = document.querySelector('#font-size-control')
-console.log(rangeInput.value)
+const currentLength = rangeInput.value;
 
 const text = document.querySelector('#text')
-console.log(text)
+let outputText = text.textContent;
+console.log(outputText)
 
 rangeInput.addEventListener('input', (event) =>{
     event.preventDefault();
+    //console.log(rangeInput.value)
+    const newText = outputText.slice(0,currentLength+1);
+    console.log(newText)
+
+
+
+
+   // text.textContent.length = rangeInput.value;
+
+
 
 })
 
