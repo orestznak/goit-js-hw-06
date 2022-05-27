@@ -3,20 +3,16 @@ console.log(textInput);
 const maxLengthInput = textInput.getAttribute('data-length');
 console.log(maxLengthInput);
 
-textInput.addEventListener("blur", function (){
+textInput.addEventListener("blur", funct => {
     //event.preventDefault();
   
-    if(this.value.length <= maxLengthInput){
-        console.log(this.value.length)
-        this.style.borderColor = '#4caf50';
-            
+    if(textInput.value.length < maxLengthInput){
+        textInput.classList.remove('invalid');
+        textInput.classList.add('valid');
     } else {
-        this.style.borderColor = '#f44336';
-        console.log(this.value.length)
+        textInput.classList.remove('valid');
+        textInput.classList.add('invalid');
+     
     }
-
-  });
+});
   
-//   textInput.addEventListener("blur", () => {
-//     textInput.value = "";
-//   });
