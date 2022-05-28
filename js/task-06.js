@@ -1,12 +1,12 @@
 const textInput = document.querySelector('#validation-input');
 console.log(textInput);
-const maxLengthInput = textInput.getAttribute('data-length');
+const maxLengthInput = parseInt(textInput.getAttribute('data-length'));
 console.log(maxLengthInput);
 
 textInput.addEventListener("blur", funct => {
     //event.preventDefault();
   
-    if(textInput.value.length < maxLengthInput){
+    if(textInput.value.length === maxLengthInput){
         textInput.classList.remove('invalid');
         textInput.classList.add('valid');
     } else {
